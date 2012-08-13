@@ -8,6 +8,15 @@
 	$config['template'] = './template.html'; // The location of the page template.
 	$config['homepage'] = 'home'; // The name of the module used to handle requests that don't specify a page.
 	$config['404page'] = '404'; // The name of the page used to handle requests to non-existing pages.
+	$config['enabled_modules'] => array(
+		'whois'=>'Whois Database Lookup',
+		'reverseip'=>'Reverse IP Lookup',
+		'getips'=>'Domain to IP Tool',
+		'headers'=>'HTTP View Headers',
+		'dns'=>'DNS Record Lookup',
+		'check-up'=>'Down for everyone or just me?',
+		'bigurl'=>'Short URL Expander',
+	);
 // "whois" page configuration
 	$config['serverlist'] = './whois-servers.txt'; // The location of the whois-servers.txt file, relative to index.php.
 	$config['maxredirs'] = 1; // The maximum number of WHOIS servers to bounce through. Recommended value is 1.

@@ -31,8 +31,12 @@ if (file_exists('./pages/' . $page . '.php')) {
 	require_once('./pages/' . $page . '.php');
 	$content = ob_get_contents(); // put the output into a string variable
 	ob_end_clean(); // kill the output buffer so we can output stuff, this time for real
-	$template = str_replace(array('%content%','%generationtime%','%year%','%pagetitle%','%page%','%basehref%','%pagehref%'), // array of strings to replace
-		array($content,round(microtime(TRUE)-START_TIME,6),date('Y'),$page_title,$page,$_SERVER['PHP_SELF'],$self_link), // stuff to replace the strings with
+	$navli = '';
+	foreach ($config['enabled_modules'] as $mod_mach=>$mod_pret) {
+		$navli .= '<li><a href="index.php?page=' . $mod_mach . '">' . $mod_pret . '</a></li>' . PHP_EOL;
+	}
+	$template = str_replace(array('%content%','%generationtime%','%year%','%pagetitle%','%page%','%basehref%','%pagehref%','%nav_li%'), // array of strings to replace
+		array($content,round(microtime(TRUE)-START_TIME,6),date('Y'),$page_title,$page,$_SERVER['PHP_SELF'],$self_link,$navli), // stuff to replace the strings with
 		$template);
 	echo $template;
 } else {
