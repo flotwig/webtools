@@ -1,7 +1,7 @@
 <?php
 // WebTools configuration file
 // General WebTools configuration
-	$config['ratelimit'] = 5; // The amount of time, in seconds, before an IP can make another request.
+	$config['ratelimit'] = 5; // The amount of time, in seconds, before an IP can make another request. // TODO
 	$config['showerrors'] = TRUE; // Should the script output errors to the browser if they occur? Set to FALSE for production environments, TRUE for development environments.
 	$config['dieonerror'] = FALSE; // Should the script die() if ANY error or warning occurs?
 	$config['limitfolder'] = './ratelimit/'; // The folder in which rate limit information is stored.
