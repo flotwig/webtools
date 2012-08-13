@@ -8,7 +8,7 @@
 	$config['template'] = './template.html'; // The location of the page template.
 	$config['homepage'] = 'home'; // The name of the module used to handle requests that don't specify a page.
 	$config['404page'] = '404'; // The name of the page used to handle requests to non-existing pages.
-	$config['enabled_modules'] => array(
+	$config['enabled_modules'] = array(
 		'whois'=>'Whois Database Lookup',
 		'reverseip'=>'Reverse IP Lookup',
 		'getips'=>'Domain to IP Tool',
